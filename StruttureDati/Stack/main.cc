@@ -3,10 +3,14 @@
 using namespace std;
 
 int main() {
+	
+	cout << "ciao" << endl;
 	Stack stack;
 	bool richiediInput = true;
 
 	init(stack);
+
+	cout << "ciao" << endl;
 
 	do {
 		int value = 0;
@@ -26,19 +30,19 @@ int main() {
 				cout << "Valore: ";
 				cin >> value;
 				if(!push(value, stack)) {
-					cerr << "Stack pieno!" << endl;
+					cerr << "Coda piena!" << endl;
 				}
 				break;
 
 			case '2': 
 				if(!pop(stack)) {
-					cerr << "Stack vuoto!" << endl;
+					cerr << "Coda vuota!" << endl;
 				}
 				break;
 
 			case '3': 
 				if(!top(value, stack)) {
-					cerr << "Stack vuoto!" << endl;
+					cerr << "Cosa vuota!" << endl;
 				}
 				else {
 					cout << "Valore: " << value << endl;
